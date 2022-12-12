@@ -29,6 +29,24 @@ class Movie
     {
         return $this->title;
     }
+    public function getYear()
+    {
+        return $this->year;
+    }
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+
 
 }
 
