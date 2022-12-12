@@ -1,5 +1,4 @@
 <?php
-
 //classe
 class Movie
 {
@@ -8,23 +7,26 @@ class Movie
 
     public $year;
     public $duration;
-    public $genre;
+    public $genres;
     public $description;
-    // public $poster;
+    public $poster;
+
+
 
     //costruttore - CONSTRUCTOR
-    function __construct(string $_title, string $_year, string $_duration, string $_genre, string $_description)
+    function __construct(string $_title, string $_year, string $_duration, array $_genres, string $_description, string $_poster)
     {
         $this->title = $_title;
         $this->year = $_year;
         $this->duration = $_duration;
-        $this->genre = $_genre;
+        $this->genres = $_genres;
         $this->description = $_description;
-        // $this->poster = $_poster;
+        $this->poster = $_poster;
     }
 
     //metodi - METHODS
 
+    //GET
     public function getTitle()
     {
         return $this->title;
@@ -37,15 +39,23 @@ class Movie
     {
         return $this->duration;
     }
-    public function getGenre()
-    {
-        return $this->genre;
-    }
+    // public function getGenre()
+    // {
+    //     return $this->genres;
+    // }
     public function getDescription()
     {
         return $this->description;
     }
+    public function getPoster()
+    {
+        return $this->poster;
+    }
 
+    public function getAllInfos()
+    {
+        return '<hr>' . 'titolo: ' . $this->title . '<br>' . 'anno: ' . $this->year . '<br>' . 'durata: ' . $this->duration . '<br>' . 'genere: ' . implode('', $this->genres) . '<br>' . 'trama: ' . $this->description;
+    }
 
 
 }
