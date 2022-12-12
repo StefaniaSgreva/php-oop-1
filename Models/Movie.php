@@ -39,10 +39,10 @@ class Movie
     {
         return $this->duration;
     }
-    // public function getGenre()
-    // {
-    //     return $this->genres;
-    // }
+    public function getGenre()
+    {
+        return $this->genres;
+    }
     public function getDescription()
     {
         return $this->description;
@@ -54,7 +54,7 @@ class Movie
 
     public function getAllInfos()
     {
-        return '<hr>' . 'titolo: ' . $this->title . '<br>' . 'anno: ' . $this->year . '<br>' . 'durata: ' . $this->duration . '<br>' . 'genere: ' . implode('', $this->genres) . '<br>' . 'trama: ' . $this->description;
+        return '<hr>' . 'titolo: ' . $this->title . '<br>' . 'anno: ' . $this->year . '<br>' . 'durata: ' . $this->duration . '<br>' . 'genere: ' . implode(',', $this->genres) . '<br>' . 'trama: ' . $this->description;
     }
 
 
